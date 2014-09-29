@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7]><html class="iem7" lang="en" dir="ltr"><![endif]-->
+<!--[if lte IE 6]><html class="lt-ie9 lt-ie8 lt-ie7" lang="en" dir="ltr"><![endif]-->
+<!--[if (IE 7)&(!IEMobile)]><html class="lt-ie9 lt-ie8" lang="en" dir="ltr"><![endif]-->
+<!--[if IE 8]><html class="lt-ie9" lang="en" dir="ltr"><![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)]><!--><html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ og: http://ogp.me/ns# rdfs: http://www.w3.org/2000/01/rdf-schema# sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XMLSchema#"><!--<![endif]-->
+<head>
+<meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UgcGWVJaGwAGUlhRAwI="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,o){t&&t(e,n,o),o||(o={});for(var a=i(e),s=a.length,c=o[r]||(o[r]={}),f=0;s>f;f++)a[f].apply(c,n);return c}function o(t,e){s[t]=i(t).concat(e)}function i(t){return s[t]||[]}function a(){return n(e)}var s={};return{on:o,emit:e,create:a,listeners:i,_events:s}}var r="nr@context";e.exports=n()},{}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(4),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,window.onerror=e,NREUM.noticeError=n;try{throw new Error}catch(f){"stack"in f&&(t(5),t(3),"addEventListener"in window&&t(1),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&t(2),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:4,2:7,3:5,4:15,5:6,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],4:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o);if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var a=document;a&&!a.hasOwnProperty("addEventListener");)a=Object.getPrototypeOf(a);a&&n(a);for(var s=XMLHttpRequest.prototype;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=e["nr@wrapped"]?t[1]=e["nr@wrapped"]:e["nr@wrapped"]=t[1]=i(e,"fn-",null,e.name||"anonymous"):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:15,2:16,ee:"QJf3ax"}],5:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:16,2:15,ee:"QJf3ax"}],6:[function(t,e){function n(t,e,n){var r=t[0];"string"==typeof r&&(r=new Function(r)),t[0]=o(r,"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:16,2:15,ee:"QJf3ax"}],7:[function(t,e){function n(){c.inPlace(this,d,"fn-")}function r(t,e){c.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}var i=t("ee").create(),a=t(1),s=t(2),c=s(i),f=s(a),u=window.XMLHttpRequest,d=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=i,window.XMLHttpRequest=function(t){var e=new u(t);try{i.emit("new-xhr",[],e),f.inPlace(e,["addEventListener","removeEventListener"],"-",function(t,e){return e}),e.addEventListener("readystatechange",n,!1)}catch(r){try{i.emit("internal-error",r)}catch(o){}}return e},window.XMLHttpRequest.prototype=u.prototype,c.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),i.on("send-xhr-start",r),i.on("open-xhr-start",r)},{1:4,2:16,ee:"QJf3ax"}],8:[function(t){function e(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function n(t){var n=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!n.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){n.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=e(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(n.cat=d.split(", ").pop())}}else n.status=0;r.cbTime=this.cbTime,o("xhr",[n,r,this.startTime])}}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(1),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(2);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=n,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,n){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=e(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof n.onload))&&i.end(n)}catch(e){try{a.emit("internal-error",e)}catch(r){}}};for(var u=0;c>u;u++)n.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:9,2:12,3:7,4:4,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],9:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],12:[function(t,e){function n(t){if(!t||"object"!=typeof t&&"function"!=typeof t)return-1;if(t===window)return 0;if(o.call(t,"__nr"))return t.__nr;try{return Object.defineProperty(t,"__nr",{value:r,writable:!0,enumerable:!1}),r}catch(e){return t.__nr=r,r}finally{r+=1}}var r=1,o=Object.prototype.hasOwnProperty;e.exports=n},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID&&c&&c.body){p.proto="https"===d.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=c.createElement("script");e.src=p.proto+t.agent,c.body.appendChild(e)}}function r(){"complete"===c.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=window,c=s.document,f="addEventListener",u="attachEvent",d=(""+location).split("?")[0],p=e.exports={offset:i(),origin:d,features:{}};c[f]?(c[f]("DOMContentLoaded",o,!1),s[f]("load",n,!1)):(c[u]("onreadystatechange",r),s[u]("onload",n)),a("mark",["firstbyte",i()])},{handle:"D5DuLP"}],15:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],16:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper";e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,f,u;try{i=this,n=o(arguments),f=r&&r(n,i)||{}}catch(d){c([d,"",[n,i,a],f])}s(e+"start",[n,i,a],f);try{return u=t.apply(i,n)}catch(p){throw s(e+"err",[n,i,p],f),p}finally{s(e+"end",[n,i,u],f)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,nrWrapper)}function a(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s,t))}function s(e,n,r){try{t.emit(e,n,r)}catch(o){c([o,e,n,r])}}function c(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=a,e.flag=i,e}},{1:15,ee:"QJf3ax"}]},{},["G9z0Bl",3,8]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="MobileOptimized" content="width" />
+<meta name="description" content="The Master of Library and Information Science (MLIS) at St. Catherine University — the only degree program in Minnesota accredited by the American Library Association — prepares library and information specialists to lead and influence in our rapidly changing information society.  St. Kate&#039;s MLIS students make real-world career connections, advocate for change, and advance access to information for all." />
+<meta name="HandheldFriendly" content="true" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="canonical" href="https://www2.stkate.edu/mlis/home" />
+<link rel="shortlink" href="https://www2.stkate.edu/node/1042" />
+<title>Master of Library and Information Science | www2.stkate.edu</title>
+<link type="text/css" rel="stylesheet" href="https://www2.stkate.edu/sites/default/files/css/css_pbm0lsQQJ7A7WCCIMgxLho6mI_kBNgznNUWmTWcnfoE.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www2.stkate.edu/sites/default/files/css/css_NBiX9lmoR_pyCKPhXB2KRwlF1PGnvedgabhD99h2PYY.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www2.stkate.edu/sites/default/files/css/css_Y3T5SbVfP_QdYSBdwO_NKbPZ0xA7GvAL2oIqasGsxm4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www2.stkate.edu/sites/default/files/css/css_sDm30_h_U2UzWIeVPU08Q27KQvPFRtyv_ChVVC8cxcE.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="https://www2.stkate.edu/sites/default/files/css/css_7yyxXiBPCY_5uBQym3sPivi0rjpbnhuu1J4G6kaoZh4.css" media="only screen" />
+
+<!--[if lt IE 9]>
+<link type="text/css" rel="stylesheet" href="https://www2.stkate.edu/sites/default/files/css/css_MKwspXoCEFx7VJ4g7nuswHj50G9y_0BzygpDnPLN5ek.css" media="screen" />
+<![endif]-->
+<script src="https://www2.stkate.edu/sites/default/files/js/js_xAPl0qIk9eowy_iS9tNkCWXLUVoat94SQT48UBCFkyQ.js"></script>
+<script src="https://www2.stkate.edu/sites/default/files/js/js_R9UbiVw2xuTUI0GZoaqMDOdX0lrZtgX-ono8RVOUEVc.js"></script>
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"stkate_grad","theme_token":"HSOw37gU5iw6Oxqftx1_dmY-5AOO5v43wgoJHGMA39M","js":{"misc\/jquery.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/admin_menu\/admin_devel\/admin_devel.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"modules\/aggregator\/aggregator.css":1,"modules\/book\/book.css":1,"modules\/comment\/comment.css":1,"sites\/all\/modules\/date\/date_api\/date.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/ckeditor\/ckeditor.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/panels\/css\/panels.css":1,"sites\/all\/themes\/adaptivetheme\/adaptivetheme\/at_core\/css\/at.layout.css":1,"sites\/all\/themes\/stkate_grad\/css\/global.base.css":1,"sites\/all\/themes\/stkate_grad\/css\/global.styles.css":1,"sites\/default\/files\/stkate_grad_themefiles\/stkate_grad.responsive.layout.css":1,"sites\/default\/files\/stkate_grad_themefiles\/stkate_grad.responsive.styles.css":1,"sites\/default\/files\/stkate_grad_themefiles\/stkate_grad.lt-ie9.layout.css":1}},"og":{"og_context":{"gid":"61","etid":"1041","entity_type":"node","label":"mlis","state":"1","created":"1372175472","rdf_mapping":[]}},"adaptivetheme":{"stkate_grad":{"layout_settings":{"bigscreen":"three-col-grail","tablet_landscape":"three-col-grail","tablet_portrait":"one-col-vert"},"media_query_settings":{"bigscreen":"only screen and (min-width:1025px)","tablet_landscape":"only screen and (min-width:769px) and (max-width:1024px)","tablet_portrait":"only screen and (min-width:481px) and (max-width:768px)"}}}});</script>
+<!--[if lt IE 9]>
+<script src="https://www2.stkate.edu/sites/all/themes/adaptivetheme/adaptivetheme/at_core/scripts/html5.js?ncn9p0"></script>
+<![endif]-->
+
+	<!-- Custom Head Info -->
+  	<!-- ======== FAVICONS ================= -->
+	<link rel="shortcut icon" href="https://www2.stkate.edu/sites/all/themes/stkate_base/images/favicon.ico" />
+	<link rel="icon" type="image/gif" href="https://www2.stkate.edu/sites/all/themes/stkate_base/images/32x32_favicon.png" />
+	<!-- ======== STYLES =============== -->
+	<link href="https://www2.stkate.edu/sites/all/themes/stkate_base/css/onepcssgrid.css" rel="stylesheet" type="text/css" />
+	<link href="https://www2.stkate.edu/sites/all/themes/stkate_base/css/headerfooter_cms.css" rel="stylesheet" type="text/css" />
+	<!-- Google Fonts -->
+	<link href='https://www2.stkate.edu/sites/all/themes/stkate_base/css/fonts.css?family=Open+Sans:400,700' rel='stylesheet' type='text/css' />
+	<link href='https://www2.stkate.edu/sites/all/themes/stkate_base/css/fonts.css?family=Lato:400,700' rel='stylesheet' type='text/css' />
+	
+	<!-- ======== SCRIPTS ================== -->
+	<script type="text/javascript" src="https://www2.stkate.edu/sites/all/themes/stkate_base/scripts/domready.js"></script>
+	<script type="text/javascript" src="https://www2.stkate.edu/sites/all/themes/stkate_base/scripts/google_search.js"></script>
+	
+	<script type="text/javascript" src="https://www2.stkate.edu/sites/all/themes/stkate_base/scripts/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="https://www2.stkate.edu/sites/all/themes/stkate_base/scripts/hoveraccordion.min.js"></script>
+  	
+  	<!--[if IE]>
+	<style>
+		.primarynavlist2, .mobile_menu, #menu-icon {
+			display:none !important;
+		}
+		#primarynav {background-color:#643887;margin-top:0px;}
+	</style>
+	<![endif]-->
+  	
+  	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-38984159-1', 'auto', {'allowLinker': true});
+  ga('require', 'linker');
+  ga('linker:autoLink', ['www.stkate.edu'] ););
+  ga('send', 'pageview');
+
+</script>
+  	
+  	
+  	<!-- End Custom Head info -->
+
+</head>
+<body onResize="window.location=window.location;" class="html not-front not-logged-in no-sidebars page-node page-node- page-node-1042 node-type-site-homepage group-context group-context-group-61 group-context-node group-context-node-1041 site-name-hidden atr-7.x-3.x">
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
+  </div>
+  
+  	<!--START HEADER-->
+  	<div class="header">
+		<div class="centerheader">
+			<div class="col6 rose"><a href="http://www.stkate.edu"><img src="https://www2.stkate.edu/sites/all/themes/stkate_base/images/logo-wordmark.png" alt="St. Catherine University" style="width:250px;" /></a></div>
+			<div class="col6 headright last">
+				<div id="searchstkates">
+					<!-- Include GoogleSearch -->
+					<form action="//www.stkate.edu/google_search/results.php" id="searchbox_001492010490937357836:ahydjkhsqv0">
+					<input name="cx" type="hidden" value="001492010490937357836:ahydjkhsqv0" /><input name="cof" type="hidden" value="FORID:11" /><label for="googIn">&nbsp;<input class="googleinput" id="googIn" maxlength="255" name="q" onblur="showSearch(this)" onfocus="clearValue(this)" size="20" type="text" value="Search" /></label><input class="googlebutton" name="sa" type="submit" value="Go" />&nbsp;</form>
+				</div><!-- end searchstkates -->
+				<div id="utilities">
+					<ul>
+						<li><a href="http://www.stkate.edu/alumnae/">Alumnae</a></li>
+						<li><a href="http://www2.stkate.edu/parent-assoc/home">Parents</a></li>
+						<li><a href="https://ssl.charityweb.net/stkate/" target="_blank">Make a Gift</a></li>
+					</ul>
+				</div><!-- end utilities -->
+			</div>
+		</div><!-- close centerheader -->
+		<div style="margin:0;padding:0;">
+			<div class="col12" id="primarynav">
+				<div class="primarynavlist">
+					<div class="col2"><a href="https://www.stkate.edu/menu/aboutus.php">About St. Kate's</a></div>
+					<div class="col2"><a href="https://www.stkate.edu/menu/admission.php">Admission</a></div>
+					<div class="col2"><a href="https://www.stkate.edu/menu/academics.php">Academics</a></div>
+					<div class="col2"><a href="https://www.stkate.edu/menu/studentlife.php">Student Life</a></div>
+					<div class="col2"><a href="http://www.stkatesathletics.com" target="_blank">Athletics</a></div>
+					<div class="col2 last"><a href="https://www.stkate.edu/menu/arts.php">The Arts</a></div>
+				</div>
+				<div class="primarynavlist2">
+					<div class="col2"><a href="https://www.stkate.edu/menu/aboutus.php">About St. Kate's</a></div>
+					<div class="col2"><a href="https://www.stkate.edu/menu/admission.php">Admission</a></div>
+					<div class="col2"><a href="https://www.stkate.edu/menu/academics.php">Academics</a></div>
+					<div class="col2"><a href="https://www.stkate.edu/menu/studentlife.php">Student Life</a></div>
+					<div class="col2"><a href="http://www.stkatesathletics.com" target="_blank">Athletics</a></div>
+					<div class="col2 last"><a href="https://www.stkate.edu/menu/arts.php">The Arts</a></div>
+				</div>
+			</div>
+		</div>
+	</div><!-- close header -->
+    <!-- END HEADER-->
+  
+  <!-- START MAIN WRAPPER -->
+	<div id="maincontentarea">
+	  	  <div id="page" class="container page">
+
+  <!-- region: Leaderboard -->
+  
+  <header id="header" class="clearfix" role="banner">
+
+          <!-- start: Branding -->
+      <div id="branding" class="branding-elements clearfix">
+
+        
+                  <!-- start: Site name and Slogan hgroup -->
+          <hgroup class="element-invisible h-group" id="name-and-slogan">
+
+                          <h1 class="element-invisible" id="site-name"><a href="/" title="Home page">www2.stkate.edu</a></h1>
+            
+            
+          </hgroup><!-- /end #name-and-slogan -->
+        
+      </div><!-- /end #branding -->
+    
+    <!-- region: Header -->
+    
+  </header>
+
+  <!-- Navigation elements -->
+      
+  <!-- Breadcrumbs -->
+  <!---->
+
+  <!-- Messages and Help -->
+    
+  <!-- region: Secondary Content -->
+  
+  <div id="columns" class="columns clearfix">
+    <div id="content-column" class="content-column" role="main">
+      <div class="content-inner">
+
+        <!-- region: Highlighted -->
+        
+        <section id="main-content">
+
+          
+                      <header id="main-content-header" class="clearfix">
+
+                              <h1 id="page-title">
+                  Master of Library and Information Science                </h1>
+              
+              
+            </header>
+          
+          <!-- region: Main Content -->
+                      <div id="content" class="region">
+              <div id="block-system-main" class="block block-system no-title" >  
+  
+  <div class="at-panel panel-display two-25-75 clearfix" >
+    <div class="region region-two-25-75-first">
+    <div class="region-inner clearfix">
+      <div class="panel-pane pane-views pane-site-home-link site-name-home no-title block">
+  <div class="block-inner clearfix">
+    
+            
+    
+    <div class="block-content">
+      <div class="view view-site-home-link view-id-site_home_link view-display-id-default view-dom-id-c05351961dbccfafc102910bd9909792">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><a href="https://www2.stkate.edu/mlis/home">Master of Library and Information Science</a></span>  </div>  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>    </div>
+
+    
+    
+  </div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane pane-block pane-og-menu-og-single-menu-block left-menu no-title block">
+  <div class="block-inner clearfix">
+    
+            
+    
+    <div class="block-content">
+      <ul class="menu clearfix"><li class="first expanded"><a href="/mlis/degree-options" title="">Program of Study Options +</a><ul class="menu clearfix"><li class="first leaf"><a href="/mlis/mlis">MLIS Degree</a></li><li class="leaf"><a href="/mlis/nondegree" title="">Non-Degree Options</a></li><li class="last leaf"><a href="/mlis/additional" title="">Additional Options</a></li></ul></li><li class="expanded"><a href="/mlis/apply">How to Apply +</a><ul class="menu clearfix"><li class="first last leaf"><a href="/mlis/requirements">Requirements</a></li></ul></li><li class="leaf"><a href="/mlis/tuition-and-fin-aid">Tuition and Financial Assistance</a></li><li class="last leaf"><a href="/mlis/faculty" title="">Faculty and Staff</a></li></ul>    </div>
+
+    
+    
+  </div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane pane-block pane-block-2 login no-title block">
+  <div class="block-inner clearfix">
+    
+            
+    
+    <div class="block-content">
+      <p class="login-text">
+	For access to content available only to the St. Catherine University community please log in using your Kateway portal login.</p>
+<p class="loginlogout">
+	<a href="https://saml.stkate.edu/simplesaml/module.php/core/loginuserpass.php?AuthState=_7e6c7920dcf29ab5a1a43db9cb3e2bd71978afbf5b%3Ahttps%3A%2F%2Fsaml.stkate.edu%2Fsimplesaml%2Fsaml2%2Fidp%2FSSOService.php%3Fspentityid%3Dhttp%253A%252F%252Fwww2.stkate.edu%252Fsimplesaml%252Fmodule.php%252Fsaml%252Fsp%252Fmetadata.php%252Fdefault-sp%26cookieTime%3D1400520681%26RelayState%3Dhttp%253A%252F%252Fwww2.stkate.edu%252Fsaml_login" target="_blank">Login</a><img alt="locked" src="/sites/default/files/template-images/lock3.png" style="width: 15px; height: 15px;margin-left:5px;" /></p>
+<p>
+	&nbsp;</p>
+    </div>
+
+    
+    
+  </div>
+</div>
+    </div>
+  </div>
+  <div class="region region-two-25-75-second">
+    <div class="region-inner clearfix">
+      <div class="panel-pane pane-entity-field pane-node-field-home-page-image no-title block">
+  <div class="block-inner clearfix">
+    
+            
+    
+    <div class="block-content">
+      <div class="field field-name-field-home-page-image field-type-image field-label-hidden view-mode-_custom_display"><div class="field-items"><figure class="clearfix field-item even"><img typeof="foaf:Image" class="image-style-none" src="https://www2.stkate.edu/sites/default/files/homepage-images/bannerMLIS_large.jpg" width="830" height="277" alt="geometric image with words Share the knowledge." /></figure></div></div>    </div>
+
+    
+    
+  </div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane pane-views pane-site-home-link site-name-home-mobile no-title block">
+  <div class="block-inner clearfix">
+    
+            
+    
+    <div class="block-content">
+      <div class="view view-site-home-link view-id-site_home_link view-display-id-default view-dom-id-5b5d7b4407e331dbd57bf2b85ccdc418">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><a href="https://www2.stkate.edu/mlis/home">Master of Library and Information Science</a></span>  </div>  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>    </div>
+
+    
+    
+  </div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane pane-node-body no-title block" id="maincontent">
+  <div class="block-inner clearfix">
+    
+            
+    
+    <div class="block-content">
+      <div class="field field-name-body field-type-text-with-summary field-label-hidden view-mode-_custom_display"><div class="field-items"><div class="field-item even" property="content:encoded"><p>
+	<strong>The Master of Library and Information Science</strong> (MLIS) at St. Catherine University — the only degree program in Minnesota accredited by the <u><a href="http://www2.stkate.edu/mlis/accreditation">American Library Association</a></u> — prepares library and information specialists to lead and influence in our rapidly changing information society.  St. Kate's MLIS students make real-world career connections, advocate for change, and advance access to information for all.</p>
+<hr /><h3>
+	Next steps</h3>
+<ul><li>
+		<a href="https://docs.google.com/a/stkate.edu/forms/d/1H7EagSkKMPhGsi1HA1k2aSX9Mf47NkGGTwCtnSnkEqA/viewform"><strong>Request </strong>more information </a><a href="http://minerva.stkate.edu/graduate.nsf/request_info?OpenForm">»</a></li>
+<li>
+		<a href="http://www2.stkate.edu/grad-college/info-session-featurelist"><strong>Attend</strong> an information session, 9 a.m., <strong>Saturday, Nov. 8 »</strong></a></li>
+<li>
+		<strong><a href="https://www2.stkate.edu/mlis/apply">Apply </a></strong><a href="https://www2.stkate.edu/mlis/apply">to start in  Spring 2015 or Fall 2015 »</a></li>
+</ul><hr /><div>
+<script type="text/javascript" class="rebelmouse-embed-script" src="https://www.rebelmouse.com/static/js-build/embed/embed.js?site=mlis&amp;height=850&amp;flexible=0&amp;dont_load_new_posts=0&amp;scrollbar_theme=dark-lighter&amp;show_rebelnav=1"></script></div>
+<h3>
+	Mission statement</h3>
+<p>
+	The Master of Library and Information Science program at St. Catherine University educates students in the principles, practices, and ethics of library and information science, imbues them with a sense of service to diverse populations, and prepares them to be life-long learners and active leaders in a rapidly changing information society. </p>
+<p>
+	<a href="http://www.ala.org/accreditedprograms/directory" target="_blank"><img alt="ala_home.png" src="/sites/default/files/sites/mlis/ala_home.png" style="width: 267px; height: 82px; margin: 0px 20px 20px; float: right;" /></a></p>
+</div></div></div>    </div>
+
+    
+    
+  </div>
+</div>
+    </div>
+  </div>
+  </div>
+
+  </div>            </div>
+          
+          <!-- Feed icons (RSS, Atom icons etc -->
+          
+          
+        </section><!-- /end #main-content -->
+
+        <!-- region: Content Aside -->
+        
+      </div><!-- /end .content-inner -->
+    </div><!-- /end #content-column -->
+
+    <!-- regions: Sidebar first and Sidebar second -->
+        
+  </div><!-- /end #columns -->
+
+  <!-- region: Tertiary Content -->
+  
+  <!-- region: Footer -->
+  </div>
+	  	</div>
+  <!-- END MAIN WRAPPER -->
+	  
+  <!--START FOOTER-->
+<div class="footer">
+	<div class="centerfooter">
+		<div class="col2 menu_footer">
+			<div>
+                <h4><a href="http://www.stkate.edu/menu/aboutus.php">About Us</a></h4>
+                <ul>
+                	<li><a href="https://www2.stkate.edu/about/home">Mission and Vision</a></li>
+                	<li><a href="https://www2.stkate.edu/about/history">Our History</a></li>
+                	<li><a href="https://www2.stkate.edu/about/quick-facts">Quick Facts</a></li>
+                	<li><a href="http://news.stkate.edu">St. Kate's Newswire</a></li>
+                </ul>
+            </div>
+		</div>
+		<div class="col2 menu_footer">
+			<div>
+            <h4><a href="http://www.stkate.edu/menu/index.php">Admission</a></h4>
+               <ul>
+                   <li><a href="http://www.stkate.edu/colleges/undergraduate/">Bachelor's Degree</a></li>
+                   <li><a href="http://www.stkate.edu/colleges/weekend/">Evening / Weekend / Online</a></li>
+                   <li><a href="http://www.stkate.edu/colleges/graduate/">Graduate Degrees</a></li>     
+                   <li><a href="http://www.stkate.edu/colleges/applied_learning/">Associate Degrees</a></li>
+                   <li><a href="http://minerva.stkate.edu/financialaid.nsf">Financial Aid</a></li>
+               </ul>
+               </div>
+           </div>
+		<div class="col2 menu_footer">
+			<div>
+                 <h4><a href="http://www.stkate.edu/menu/index.php">Academics</a></h4>
+                 <ul>
+                   <li><a href="http://www.stkate.edu/pages/academics/programs.php">Programs and Degrees</a></li>
+                   <li><a href="http://library.stkate.edu">Library</a></li>
+                   <li><a href="http://www.stkate.edu/pages/academics/support.php">Academic Support</a></li>
+                   <li><a href="http://www.stkatebookstore.com/">Bookstore</a></li>
+                 </ul>
+                </div>
+		</div>
+		<div class="col2 menu_footer">
+			<div>
+                 <h4><a href="http://www.stkate.edu/menu/index.php">Student Life</a></h4>
+                 <ul>
+                   <li><a href="https://www2.stkate.edu/career-development/home">Career Resources</a></li>
+                   <li><a href="https://www2.stkate.edu/campus-ministry/home">Campus Ministry</a></li>
+                   <li><a href="https://www2.stkate.edu/global-studies/home">Global Studies</a></li>
+                   <li><a href="https://www2.stkate.edu/sca-stpaul/clubs-orgs">Clubs and Organizations</a></li>
+                   <li><a href="https://www2.stkate.edu/residence-life/home">Residence Life</a></li>
+                 </ul>
+                </div>
+		</div>
+		<div class="col4 socialmedia_images last">
+			<a href="http://www.stkate.edu/photobureau" target="_blank"><img src="https://www2.stkate.edu/sites/all/themes/stkate_base/images/sm-flickr.png" alt="Flickr" /></a> 
+			<a href="http://www.facebook.com/st.kates" target="_blank"><img src="https://www2.stkate.edu/sites/all/themes/stkate_base/images/sm-facebook.png" alt="FaceBook"/></a> 
+			<a href="http://twitter.com/#!/StKate" target="_blank"><img src="https://www2.stkate.edu/sites/all/themes/stkate_base/images/sm-twitter.png" alt="Twitter" /></a>
+			<a href="http://www.linkedin.com/company/20648" target="_blank"><img src="https://www2.stkate.edu/sites/all/themes/stkate_base/images/sm-linkedin.png" alt="LinkedIn" /></a> 
+			<a href="http://feeds2.feedburner.com/StKatesNews"><img src="https://www2.stkate.edu/sites/all/themes/stkate_base/images/sm-rss.png" alt="RSS Feed" id="rss" /></a>
+		</div>
+	</div><!-- end centerfooter -->
+	<div class="centerfooter">
+		<div class="col5 footerimage">
+			<img src="https://www2.stkate.edu/sites/all/themes/stkate_base/images/scu-logo-footer2.png" alt="St. Catherine University" />
+		</div>
+		<div class="col5 footeraddress">
+			<p><strong>St. Paul Campus</strong>&nbsp;&nbsp;2004 Randolph Ave. - St. Paul, MN 55105<br />
+       		<strong>Minneapolis Campus</strong>&nbsp;&nbsp;601 25th Ave. S. - Minneapolis, MN 55454</p>
+		</div>
+		<div class="col2 last phone">
+			<p class="hidemobile"><a href="http://www.stkate.edu/">Home</a>&nbsp;-&nbsp;<a href="http://minerva.stkate.edu/directory.nsf/az_index_web">A&nbsp;to&nbsp;Z</a></p>
+			<p>800.945.4599</p>
+			<p>651.690.6000</p>
+		</div>
+	</div><!--end centerfooter-->
+</div><!-- end footer -->
+<script type="text/javascript">
+$(document).ready(function() {
+
+	/* prepend menu icon */
+	$('#primarynav').prepend('<div id="menu-icon"><p class="mobile_menu">Menu</p></div>');
+	
+	/* toggle nav */
+	$("#menu-icon").on("click", function(){
+		$(".primarynavlist2").slideToggle();
+		$(this).toggleClass("active");
+	});
+	
+	//$(document.body).prepend('<div class="modalOverLay"></div>');
+    //$('.modalOverLay').css({ opacity: 0.5, width: '100%', height: '100%', color: '#000' });
+
+	if((($('.pane-og-article-content-private-panel-pane-1').length) || ($('.pane-og-article-content-public-panel-pane-1').length)) && ($('.admission-menu').length)) {
+		$('<div class="panel-separator"></div><div class="block-inner-announcement"><div class="block-content"><h2 class="announcements-title">Featured</h2></div></div>').insertAfter('.admission-menu');
+	}
+	else if((($('.pane-og-article-content-private-panel-pane-1').length) || ($('.pane-og-article-content-public-panel-pane-1').length)) && ($('.pane-og-menu-og-multi-menu-block').length)) {
+		$('<div class="panel-separator"></div><div class="block-inner-announcement"><div class="block-content"><h2 class="announcements-title">Featured</h2></div></div>').insertAfter('.pane-og-menu-og-multi-menu-block');
+	}
+	else if((($('.pane-og-article-content-private-panel-pane-1').length) || ($('.pane-og-article-content-public-panel-pane-1').length)) && (!$('.pane-og-menu-og-multi-menu-block').length)) {
+		$('<div class="panel-separator"></div><div class="block-inner-announcement"><div class="block-content"><h2 class="announcements-title">Featured</h2></div></div>').insertAfter('.pane-og-menu-og-single-menu-block');
+	}
+	else {}
+
+	//$(".menu a[href='/']").attr('href', '#');
+
+	if (document.documentElement.clientWidth > 1024) {
+		/*animate left menus*/
+    	$('.menu').hoverAccordion({ 
+      		keepHeight: false,  
+      		onClickOnly: true,
+      	speed: 'fast'
+   		}); 
+	}
+
+	if (document.documentElement.clientWidth < 1025) {
+		$('.two-25-75 .region-two-25-75-first').appendTo('.two-25-75 .region-two-25-75-second');
+		
+		if($('.block-inner-announcement').length) {
+		
+			var announcements = '<div class="block-inner-announcement">' + $('.block-inner-announcement').html() + '</div><div class="panel-separator"></div>';
+			$('.block-inner-announcement').remove();
+		
+				if($('.pane-og-article-content-public-panel-pane-1').length) {
+					announcements = announcements + '<div class="pane-og-article-content-public-panel-pane-1">' + $('.pane-og-article-content-public-panel-pane-1').html() + '</div>';
+					$('.pane-og-article-content-public-panel-pane-1').remove();
+				}
+				if($('.pane-og-article-content-private-panel-pane-1').length) {
+					announcements = announcements + '<div class="pane-og-article-content-private-panel-pane-1">' + $('.pane-og-article-content-private-panel-pane-1').html() + '</div>';
+					$('.pane-og-article-content-private-panel-pane-1').remove();
+	  			}
+	  		$(announcements).prependTo('.region-two-25-75-first');
+	  	}
+	}
+
+	var currwidth = document.documentElement.clientWidth;
+	window.onresize = function(){
+		var currurl = window.location.href;
+		var newwidth = document.documentElement.clientWidth;
+		if((currwidth != newwidth) && (newwidth > currwidth) && (currwidth < 1024) && (newwidth >=1024) && (currurl.indexOf("overlay") == -1)) {
+
+			$('.modalOverLay').fadeIn('slow');
+            $('.contentBox').css({
+                position: 'absolute',
+                left: ($(document).width() - $('.contentBox').width()) / 2,
+                top: ($(document).height() - $('.contentBox').height()) / 5
+                //top:75
+            });
+            $('.contentBox').fadeIn(500);
+
+       	 	location.replace(location.href);
+
+    	}    
+    	else if((currwidth != newwidth) && (newwidth < currwidth) && (currwidth > 1024) && (newwidth <1024) && (currurl.indexOf("overlay") == -1)) {
+
+			//$('.modalOverLay').fadeIn('slow');
+            $('.contentBox').css({
+                position: 'absolute',
+                left: ($(document).width() - $('.contentBox').width()) / 2,
+                top: ($(document).height() - $('.contentBox').height()) / 8
+                //top:75
+            });
+            $('.contentBox').fadeIn(500);
+
+       	 	location.replace(location.href);
+
+    	}  
+    	else {}
+	}
+	
+	if((document.documentElement.clientWidth < 1024) && $('.site-name-home'.length)) {
+		$('.site-name-home').css('display','none');
+	}
+	if (window.location.href.indexOf("user/login") != -1) {
+		$('.form-item-name .description').text('Enter your KateWay username');
+		$('.form-item-pass .description').text('Enter your primary password');
+		$('.page-user-login .tabs').css('display','none');
+	}
+
+});
+
+</script>
+<div class="contentBox" style="background-color:#DBDAD4;padding:30px 10px;border:solid 1px #ccc;text-align:center;z-index:1000;"><p>Please wait a moment as we optimize our site for you.<br /><br /><img src="https://www2.stkate.edu/sites/default/files/template-images/ajax-loader.gif" alt="rotating loading image" /></p></div>
+<style>.contentBox {display:none;}</style>
+
+
+
+  <!--END FOOTER-->
+  
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"beacon-2.newrelic.com","licenseKey":"4d922ae92a","applicationID":"3669343","transactionName":"NlBbbBRRVkNTAUReXg8abEoPHxdZXAZVTx8RXUk=","queueTime":0,"applicationTime":12,"ttGuid":"","agentToken":"","atts":"GhdYGlxLRU0=","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com\/nr-460.min.js"}</script></body>
+</html>
