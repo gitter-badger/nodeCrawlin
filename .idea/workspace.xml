@@ -26,43 +26,34 @@
       <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="1" selection-start="103" selection-end="103" vertical-scroll-proportion="0.0" vertical-offset="112" max-vertical-offset="540">
+            <state line="16" column="0" selection-start="254" selection-end="254" vertical-scroll-proportion="0.0" vertical-offset="83" max-vertical-offset="540">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="setup.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/setup.js">
+      <file leaf-file-name="crawler.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/crawler.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="171" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
+            <state line="13" column="76" selection-start="293" selection-end="363" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1035">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="serverTest.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/serverTest.js">
+      <file leaf-file-name="resQtest.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resQtest.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="1" selection-start="422" selection-end="422" vertical-scroll-proportion="0.6048387" vertical-offset="0" max-vertical-offset="870">
+            <state line="52" column="14" selection-start="1039" selection-end="1042" vertical-scroll-proportion="0.0" vertical-offset="552" max-vertical-offset="870">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="send_to_redis.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/send_to_redis.js">
+      <file leaf-file-name="crawl-resq.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/crawl-resq.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="33" selection-end="281" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="build_job.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build_job.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="33" selection-end="241" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
+            <state line="73" column="0" selection-start="2971" selection-end="2971" vertical-scroll-proportion="0.43548387" vertical-offset="852" max-vertical-offset="1410">
               <folding />
             </state>
           </provider>
@@ -72,6 +63,15 @@
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
             <state line="17" column="10" selection-start="349" selection-end="349" vertical-scroll-proportion="-10.625" vertical-offset="0" max-vertical-offset="405">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="chrome_console.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/chrome_console.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
               <folding />
             </state>
           </provider>
@@ -94,13 +94,16 @@
         <option value="$PROJECT_DIR$/send_to_redis.js" />
         <option value="$PROJECT_DIR$/build_job.js" />
         <option value="$PROJECT_DIR$/serverTest.js" />
+        <option value="$PROJECT_DIR$/resQtest.js" />
+        <option value="$PROJECT_DIR$/node_modules/crawl-resq.js" />
+        <option value="$PROJECT_DIR$/crawl-resq.js" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="50" />
-    <option name="y" value="46" />
+    <option name="x" value="62" />
+    <option name="y" value="30" />
     <option name="width" value="1190" />
     <option name="height" value="717" />
   </component>
@@ -159,6 +162,11 @@
     <property name="last_opened_file_path" value="$USER_HOME$/workspace/node-web-crawler" />
     <property name="ignore_missing_gitignore" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner />
@@ -206,16 +214,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="50" y="46" width="1190" height="717" extended-state="0" />
+    <frame x="62" y="30" width="1190" height="717" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33222038" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4223706" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2369338" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2369338" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24752475" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -254,13 +262,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="365" selection-end="365" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="1245">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="1" selection-start="103" selection-end="103" vertical-scroll-proportion="0.0" vertical-offset="112" max-vertical-offset="540">
@@ -275,37 +276,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="14" selection-start="1951" selection-end="1951" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1365">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="20" selection-start="337" selection-end="337" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="375">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="46" selection-start="459" selection-end="459" vertical-scroll-proportion="0.0" vertical-offset="164" max-vertical-offset="765">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="46" selection-start="459" selection-end="459" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="765">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="0" selection-end="181" vertical-scroll-proportion="0.2200489" vertical-offset="0" max-vertical-offset="1035">
           <folding />
         </state>
       </provider>
@@ -317,37 +290,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/output/page2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.5603448" vertical-offset="195" max-vertical-offset="9390">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="1" selection-start="103" selection-end="103" vertical-scroll-proportion="0.0" vertical-offset="112" max-vertical-offset="540">
+        <state line="16" column="0" selection-start="254" selection-end="254" vertical-scroll-proportion="0.0" vertical-offset="112" max-vertical-offset="540">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/setup.js">
+    <entry file="file://$PROJECT_DIR$/chrome_console.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="171" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="385">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build_job.js">
+    <entry file="file://$PROJECT_DIR$/resQtest.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="33" selection-end="241" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
+        <state line="52" column="14" selection-start="1039" selection-end="1042" vertical-scroll-proportion="0.0" vertical-offset="552" max-vertical-offset="870">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/send_to_redis.js">
+    <entry file="file://$PROJECT_DIR$/crawler.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="33" selection-end="281" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+        <state line="13" column="76" selection-start="293" selection-end="363" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1035">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/serverTest.js">
+    <entry file="file://$PROJECT_DIR$/crawl-resq.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="1" selection-start="422" selection-end="422" vertical-scroll-proportion="0.6048387" vertical-offset="0" max-vertical-offset="870">
+        <state line="73" column="0" selection-start="2971" selection-end="2971" vertical-scroll-proportion="0.43548387" vertical-offset="852" max-vertical-offset="1410">
           <folding />
         </state>
       </provider>

@@ -1,7 +1,7 @@
 var http=require('http');
 var http  = require('http');
 var redis = require('redis');
-var QUEUE_NAME = 'default';
+var QUEUE_NAME = 'qrl';
 var CLASS_NAME = 'SomeJob';
 var client = redis.createClient();
 var job_queue = [];
