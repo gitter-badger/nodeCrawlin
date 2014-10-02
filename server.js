@@ -18,8 +18,6 @@ request(url, function(error, response, html){
     } else {
         var $ = cheerio.load(html);
 
-
-
         $('body').filter(function () {
             var data = $(this);
 
@@ -42,7 +40,9 @@ request(url, function(error, response, html){
 
 
             var uniqueLinks = _.uniq(absLinks);
-            console.log(uniqueLinks);
+            //console.log(uniqueLinks);
+            var i = 0;
+
 
             for (i = 0; i < uniqueLinks.length; i++) {
                 request(uniqueLinks[i]).pipe(fs.createWriteStream('page'+i+'.html'));
