@@ -1,6 +1,8 @@
 /**
  * Created by kingHenry on 10/1/14.
+ vi: sw=4 ts=4 expandtab
  */
+
 var NR = require("node-resque");
 
 ///////////////////////////
@@ -19,9 +21,9 @@ var connectionDetails = {
 var jobs = {
     "crawl": {
         perform: function(level,url,callback){
-            console.log("enter: ",level,url)
-            if(level<2){
-                callback(level,url);
+            if(level<4){
+                console.log("entering : ",level,url)
+                nextCrawl(level,[url]);
             }
         }
     }
@@ -72,15 +74,16 @@ scheduler.on('transferred_job',    function(timestamp, job){ console.log("schedu
 ////////////////////////
 seedUrl='http://www.alise.org/alise-membership---2014---institutional-members';
 
+
 var queue = new NR.queue({connection: connectionDetails}, jobs,function(){
-   function nextCrawl(level,urls){
-        console.log("crawling :",level,urls);
+    nextCrawl=function(level,urls){
         urls.forEach(function(oneUrl, index,allUrls){
-            queue.enqueue('qrl','crawl',[level+1, oneUrl,nextCrawl])
+            console.log("callback", level)
+            queue.enqueue('qrl','crawl',[level+1, oneUrl])
         });
 
     }
-    queue.enqueue('qrl','crawl',[0,seedUrl, nextCrawl]);
+    queue.enqueue('qrl','crawl',[0,seedUrl]);
 });
 
 
