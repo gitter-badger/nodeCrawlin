@@ -5,7 +5,6 @@ var cheerio = require('cheerio');
 var app     = express();
 var async = require('async');
 var _ = require('underscore');
-var curl = require('node-curl');
 
 
 
@@ -51,13 +50,12 @@ request(url, function(error, response, html){
         })
     }
 
-        res.
-            send('Check your console!')
+        res.send('Check your console!')
     })
  })
   
 app.listen('8081')
-  
- console.log('Magic happens on port 8081');
+
+    console.log('Magic happens on port 8081');
   
 exports = module.exports = app;
