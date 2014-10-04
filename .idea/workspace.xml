@@ -35,7 +35,7 @@
       <file leaf-file-name="crawler.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/crawler.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="0" selection-start="1501" selection-end="1501" vertical-scroll-proportion="0.0" vertical-offset="606" max-vertical-offset="1005">
+            <state line="61" column="0" selection-start="1501" selection-end="1501" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="1005">
               <folding />
             </state>
           </provider>
@@ -44,7 +44,7 @@
       <file leaf-file-name="kueTest.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kueTest.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="2" selection-start="890" selection-end="890" vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="1140">
+            <state line="92" column="2" selection-start="2359" selection-end="2359" vertical-scroll-proportion="0.0" vertical-offset="1116" max-vertical-offset="1515">
               <folding>
                 <element signature="e#0#43#0" expanded="false" />
               </folding>
@@ -52,19 +52,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="konsume.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="konsume.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/konsume.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="0" selection-start="1870" selection-end="1870" vertical-scroll-proportion="0.0" vertical-offset="786" max-vertical-offset="1185">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="crawl-resq.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/crawl-resq.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="84" column="5" selection-start="3296" selection-end="3296" vertical-scroll-proportion="0.49481866" vertical-offset="1069" max-vertical-offset="1455">
+            <state line="22" column="29" selection-start="519" selection-end="519" vertical-scroll-proportion="0.6616541" vertical-offset="66" max-vertical-offset="1290">
               <folding />
             </state>
           </provider>
@@ -91,8 +82,8 @@
         <option value="$PROJECT_DIR$/node_modules/crawl-resq.js" />
         <option value="$PROJECT_DIR$/crawl-resq.js" />
         <option value="$PROJECT_DIR$/crawler.js" />
-        <option value="$PROJECT_DIR$/konsume.js" />
         <option value="$PROJECT_DIR$/kueTest.js" />
+        <option value="$PROJECT_DIR$/konsume.js" />
       </list>
     </option>
   </component>
@@ -272,30 +263,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resQtest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="14" selection-start="1039" selection-end="1042" vertical-scroll-proportion="0.0" vertical-offset="780" max-vertical-offset="870">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crawl-resq.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="0" selection-start="3008" selection-end="3008" vertical-scroll-proportion="0.0" vertical-offset="1125" max-vertical-offset="1455">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="10" selection-start="349" selection-end="349" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="405">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chrome_console.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
           <folding />
         </state>
       </provider>
@@ -335,39 +305,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chrome_console.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="385">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="0" selection-start="254" selection-end="254" vertical-scroll-proportion="0.0" vertical-offset="112" max-vertical-offset="540">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/konsume.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="0" selection-start="1870" selection-end="1870" vertical-scroll-proportion="0.0" vertical-offset="786" max-vertical-offset="1185">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kueTest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="2" selection-start="890" selection-end="890" vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="1140">
-          <folding>
-            <element signature="e#0#43#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resQtest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="14" selection-start="1039" selection-end="1042" vertical-scroll-proportion="1.9548873" vertical-offset="0" max-vertical-offset="870">
           <folding />
         </state>
       </provider>
@@ -379,9 +319,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crawl-resq.js">
+    <entry file="file://$PROJECT_DIR$/kueTest.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="5" selection-start="3296" selection-end="3296" vertical-scroll-proportion="0.49481866" vertical-offset="1069" max-vertical-offset="1455">
+        <state line="92" column="2" selection-start="2359" selection-end="2359" vertical-scroll-proportion="0.0" vertical-offset="1116" max-vertical-offset="1515">
+          <folding>
+            <element signature="e#0#43#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/konsume.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="29" selection-start="519" selection-end="519" vertical-scroll-proportion="0.6616541" vertical-offset="66" max-vertical-offset="1290">
           <folding />
         </state>
       </provider>

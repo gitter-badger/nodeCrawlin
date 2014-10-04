@@ -42,31 +42,56 @@ nextCrawl=function(level,urls){
         console.log("urls : ", oneUrl , " added to queue for crawling " ,level ,"deep");
 
     });
-}*/
+}
 
 
-    sequence += 1;
-    var crawlUrls= function (level,urlsToCrawl) {
-        urlsToCrawl.forEach(oneUrl,index)
+var job = jobs.create('url', {
+    url: 'http://www.alise.org/alise-membership---2014---institutional-members'
+    ,level: 1
+}).save();
+
+job.on('complete', function (result) {
+    console.log('job ' + sequence + ' results: ', result);
+
+});
+job.on('failed', function () {
+    console.log('job ' + sequence + '  failed');
+});
+*/
+
+var seedUrl=['http://www.alise.org/alise-membership---2014---institutional-members'];
+var crawlUrls= function (level,urlsToCrawl,breadcrumb) {
+
+        var myJobs = [];
+
+        urlsToCrawl.forEach(function(oneUrl,index)
         {
+            var bCrumb=breadcrumb+'|'+oneUrl;
             var crawlJob = jobs.create('url', {
                 url: oneUrl
-               , level:level
+               ,level:level+1
+               ,breadcrumb:bCrumb
             }).save();
-        }
-        var job = jobs.create('url', {
-            url: 'http://www.alise.org/alise-membership---2014---institutional-members'
-           ,level: 1
-        }).save();
-
-        job.on('complete', function (result) {
-            console.log('job ' + sequence + ' results: ', result);
-
+            myJobs.push(crawlJob)
         });
-        job.on('failed', function () {
-            console.log('job ' + sequence + '  failed');
-        });
-    }(sequence);
+        var nextUrls = [];
+        myJobs.forEach(function(job,index)
+            {
+              nextUrls.push()
+              job.on('complete',function(result){
+                  if (result.level<2){
+                      console.log('cb level: '+(result.level+1))
+                      crawlUrls(result.level,result.foundUrls,result.breadcrumb)
+
+                  }
+
+              })
+              job.on('failed', function(error){
+
+              })
+            });
+};
+crawlUrls(0,seedUrl,"seedURL");
 
 
 
