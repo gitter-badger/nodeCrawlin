@@ -34,12 +34,14 @@ var crawlUrls= function (level,urlsToCrawl,breadcrumb) {
     });
 
     console.log( "Firing " + myJobs.length + " jobs for" + bCrumb);
-
+    var jobCount=0;
     myJobs.forEach(function(job,index)
     {
 
       job.on('complete',function(result){
-          console.log( "Done for " +  job.data.breadcrumb)
+          jobCount+=1;
+          console.log( jobCount+ " Done for " +  job.data.breadcrumb)
+
           if (result.level<2){
               console.log('cb level: '+(result.level+1))
               crawlUrls(result.level,result.foundUrls,result.breadcrumb)
