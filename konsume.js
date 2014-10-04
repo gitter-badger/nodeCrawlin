@@ -26,6 +26,7 @@ jobs.process('url',function(job,done){
         if (error) {
             console.log ("req ERR for " + url)
             console.log(error)
+            done(error)
         } else {
             var $ = cheerio.load(html);
             $('body').filter(function () {
