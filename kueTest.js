@@ -21,7 +21,7 @@ var crawlUrls= function (level,urlsToCrawl,breadcrumb) {
     var bCrumb="seedUrl";
     urlsToCrawl.forEach(function(oneUrl,index)
     {
-        if(breadcrumb !=seedUrl){
+        if(breadcrumb != "seedURL"){
             bCrumb=breadcrumb+'|'+oneUrl;
         }
 
@@ -57,6 +57,4 @@ var crawlUrls= function (level,urlsToCrawl,breadcrumb) {
 // MAIN 
 
 crawlUrls(0,seedUrl,"seedURL");
-
-
-
+kue.app.listen(3000)

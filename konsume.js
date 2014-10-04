@@ -17,10 +17,10 @@ var kue = require('kue'),
 console.log('Start Consumer')
 
 jobs.process('url',function(job,done){
-    console.log( "Processing  Job ......................................." )
     url = job.data.url;
     breadcrumb=job.data.breadcrumb;
     level=job.data.level;
+    console.log( "Processing  Job " + breadcrumb + "................" )
 
     request(url, function(error, response, html){
         if (error) {
@@ -60,7 +60,7 @@ jobs.process('url',function(job,done){
                     breadcrumb:breadcrumb,
                     level:level
                 };
-                console.log ("Done ...")
+                console.log ("Done ... " + breadcrumb )
                 done(null,returnResults)
             })
         }
