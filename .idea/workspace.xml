@@ -41,10 +41,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="kueTest.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="kueTest.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/kueTest.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="92" column="2" selection-start="2359" selection-end="2359" vertical-scroll-proportion="0.0" vertical-offset="1116" max-vertical-offset="1515">
+            <state line="21" column="32" selection-start="575" selection-end="575" vertical-scroll-proportion="-0.09022556" vertical-offset="321" max-vertical-offset="885">
               <folding>
                 <element signature="e#0#43#0" expanded="false" />
               </folding>
@@ -52,10 +52,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="konsume.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="konsume.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/konsume.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="29" selection-start="519" selection-end="519" vertical-scroll-proportion="0.6616541" vertical-offset="66" max-vertical-offset="1290">
+            <state line="64" column="20" selection-start="1846" selection-end="1846" vertical-scroll-proportion="0.0" vertical-offset="576" max-vertical-offset="1305">
               <folding />
             </state>
           </provider>
@@ -82,8 +82,8 @@
         <option value="$PROJECT_DIR$/node_modules/crawl-resq.js" />
         <option value="$PROJECT_DIR$/crawl-resq.js" />
         <option value="$PROJECT_DIR$/crawler.js" />
-        <option value="$PROJECT_DIR$/kueTest.js" />
         <option value="$PROJECT_DIR$/konsume.js" />
+        <option value="$PROJECT_DIR$/kueTest.js" />
       </list>
     </option>
   </component>
@@ -202,10 +202,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="62" y="30" width="1190" height="717" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28714523" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28714523" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -246,7 +246,9 @@
     </option>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.gitignore">
@@ -319,19 +321,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kueTest.js">
+    <entry file="file://$PROJECT_DIR$/konsume.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="2" selection-start="2359" selection-end="2359" vertical-scroll-proportion="0.0" vertical-offset="1116" max-vertical-offset="1515">
-          <folding>
-            <element signature="e#0#43#0" expanded="false" />
-          </folding>
+        <state line="64" column="20" selection-start="1846" selection-end="1846" vertical-scroll-proportion="0.0" vertical-offset="576" max-vertical-offset="1305">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/konsume.js">
+    <entry file="file://$PROJECT_DIR$/kueTest.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="29" selection-start="519" selection-end="519" vertical-scroll-proportion="0.6616541" vertical-offset="66" max-vertical-offset="1290">
-          <folding />
+        <state line="21" column="32" selection-start="575" selection-end="575" vertical-scroll-proportion="-0.09022556" vertical-offset="321" max-vertical-offset="885">
+          <folding>
+            <element signature="e#0#43#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
