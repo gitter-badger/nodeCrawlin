@@ -13,42 +13,49 @@ var kue = require('kue'),
 
 
 var seedUrl=['http://www.alise.org/alise-membership---2014---institutional-members'];
+
+//----------------------------------------------------------
+
 var crawlUrls= function (level,urlsToCrawl,breadcrumb) {
+    var myJobs = [];
+    var bCrumb="seedUrl";
+    urlsToCrawl.forEach(function(oneUrl,index)
+    {
+        if(breadcrumb !=seedUrl){
+            bCrumb=breadcrumb+'|'+oneUrl;
+        }
 
-        var myJobs = [];
+        var crawlJob = jobs.create('url', {
+            url: oneUrl
+           ,level:level+1
+           ,breadcrumb:bCrumb
+        }).save();
+        myJobs.push(crawlJob)
+    });
 
-        urlsToCrawl.forEach(function(oneUrl,index)
-        {
-            var bCrumb="seedUrl";
-            if(breadcrumb!=seedUrl){
-                bCrumb=breadcrumb+'|'+oneUrl;
-            }
+    console.log( "Firing " + myJobs.length + " jobs for" + bCrumb);
 
-            var crawlJob = jobs.create('url', {
-                url: oneUrl
-               ,level:level+1
-               ,breadcrumb:bCrumb
-            }).save();
-            myJobs.push(crawlJob)
-        });
-    console.log(myJobs);
-        myJobs.forEach(function(job,index)
-            {
+    myJobs.forEach(function(job,index)
+    {
 
-              job.on('complete',function(result){
-                  console.log(result);
-                  if (result.level<2){
-                      console.log('cb level: '+(result.level+1))
-                      crawlUrls(result.level,result.foundUrls,result.breadcrumb)
+      job.on('complete',function(result){
+          console.log( "Done for " +  job.data.breadcrumb)
+          if (result.level<2){
+              console.log('cb level: '+(result.level+1))
+              crawlUrls(result.level,result.foundUrls,result.breadcrumb)
 
-                  }
+          }
 
-              })
-              job.on('failed', function(error){
-
-              })
-            });
+      })
+      job.on('failed', function(error){
+          console.log ("Failure for " + job.data.breadCrumb )
+      })
+    });
 };
+
+//------------------------------------------
+// MAIN 
+
 crawlUrls(0,seedUrl,"seedURL");
 
 
