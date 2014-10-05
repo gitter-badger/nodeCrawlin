@@ -63,18 +63,29 @@ jobs.process('url',function(job,done){
                 if (level==3)
                 {
                     for(i=0;i<uniqueLinks.length;i++){
-                        isACollege(uniqueLinks[i])
+                        if(isACollege){
+                            onlyUnivs.push(uniqueLinks[i]);
+                        }
+
                     }
+                    var results = {
+                        foundUrls:onlyUnivs
+                        ,breadcrumb:breadcrumb
+                        ,level:level
+                    };
+                    console.log ("Done ... " + breadcrumb )
+                    done(null,results);
+
+                }else{
+                    var returnResults = {
+                        foundUrls:uniqueLinks,
+                        breadcrumb:breadcrumb,
+                        level:level
+                    };
+                    console.log ("Done ... " + breadcrumb )
+                    done(null,returnResults)
+
                 }
-                console.log(onlyUnivs);
-                //console.log(uniqueLinks);
-                var returnResults = {
-                    foundUrls:uniqueLinks,
-                    breadcrumb:breadcrumb,
-                    level:level
-                };
-                console.log ("Done ... " + breadcrumb )
-                done(null,returnResults)
             })
         }
     })   // request
@@ -87,7 +98,7 @@ var isACollege = function(url){
         if (error) {
             console.log ("req ERR for " + url)
             console.log(error)
-            done(error)
+            return false
         } else {
             var $$ = cheerio.load(html);
             $$('title').filter(function () {
@@ -95,9 +106,11 @@ var isACollege = function(url){
                 var titleText = univs.text();
                 //console.log(titleText);
                 if( titleText.indexOf("niversity")!=-1||titleText.indexOf("ollege")!=-1){
-                    onlyUnivs.push(url);
-                }else(console.log("hey here's an error: ",url));
-
+                    return true
+                }else{
+                    console.log("hey here's an error: ",url)
+                    return false;
+                };
             });
         }
     });
