@@ -40,17 +40,16 @@ var crawlUrls= function (level,urlsToCrawl,breadcrumb) {
 
       job.on('complete',function(result){
           jobCount+=1;
-          console.log( jobCount+ " Done for " +  job.data.breadcrumb)
+          console.log( jobCount+ " Done Got: " + result.foundUrls.length + " Urls for "  +  job.data.breadcrumb)
 
-          if (result.level<2){
-              console.log('cb level: '+(result.level+1))
+          if (result.level<3){
+              console.log('cb initiating level: '+(result.level+1))
               crawlUrls(result.level,result.foundUrls,result.breadcrumb)
-
           }
 
       })
       job.on('failed', function(error){
-          console.log ("Failure for " + job.data.breadCrumb )
+          console.log (jobCount + " Failure for " + job.data.breadcrumb )
       })
     });
 };
@@ -59,4 +58,4 @@ var crawlUrls= function (level,urlsToCrawl,breadcrumb) {
 // MAIN 
 
 crawlUrls(0,seedUrl,"seedURL");
-kue.app.listen(3000)
+// kue.app.listen(3000)
