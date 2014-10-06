@@ -68,8 +68,19 @@ var crawlUrls= function (level,urlsToCrawl,breadcrumb) {
               console.log('cb initiating level: '+(result.level+1))
               crawlUrls(result.level,result.foundUrls,result.breadcrumb)
           } else {
-              console.log ("LVL3 -->", result.foundUrls) 
-          }
+              lvl3UrlArray=result.foundUrls;
+              lvl3Breadcrumb=result.breadCrumb;
+              fs.appendFile('output.txt',lvl3Breadcrumb,function(err){
+                  console.log(err);
+              })
+              for (i=0;i<lvl3UrlArray.length();i++){
+                  fs.appendFile('output.txt',lvl3UrlArray[i],function(err){
+                    console.log(err);
+                  });
+              }
+              }
+              console.log ("LVL3 -->", result.foundUrls)
+
 
       })
       job.on('failed', function(error){
