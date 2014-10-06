@@ -69,15 +69,30 @@ var crawlUrls= function (level,urlsToCrawl,breadcrumb) {
               crawlUrls(result.level,result.foundUrls,result.breadcrumb)
           } else {
               lvl3UrlArray=result.foundUrls;
-              lvl3Breadcrumb=result.breadCrumb;
-              fs.appendFile('output.txt',lvl3Breadcrumb,function(err){
-                  console.log(err);
-              })
-              for (i=0;i<lvl3UrlArray.length();i++){
-                  fs.appendFile('output.txt',lvl3UrlArray[i],function(err){
-                    console.log(err);
+              
+              lvl3Breadcrumb='<b>'+result.breadcrumb+'</b></br>\n<ul>\n';
+              fs.appendFile('output.html',lvl3Breadcrumb,function(err){
+               if(err){
+                 console.log(err);
+                }
+              });
+              for (i=0;i<lvl3UrlArray.length;i++){
+                 var theUrl= "<li><a href="+lvl3UrlArray[i]+">"+lvl3UrlArray[i]+"</a></br>\n</li>\n"
+                  fs.appendFile('output.html',theUrl,function(err){
+                    if(err){
+                     console.log(err);
+                   }
+                    
                   });
               }
+
+                  fs.appendFile('output.html','</ul>',function(err){
+                    
+                    if(err){
+                     console.log(err);
+                   }
+                    
+                  });
               }
               console.log ("LVL3 -->", result.foundUrls)
 
