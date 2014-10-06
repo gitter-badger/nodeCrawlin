@@ -11,13 +11,13 @@ This is a web Crawler written in NodeJS using the Kue library which uses Redis a
 The task was to crawl at the depth of two levels, and to write the output at the final desired leaf node.
 
 ##Architecture
-+NodeJS
-+Redis with Kue as an external queue (https://github.com/LearnBoost/kue)
-+Running on AWS EC2 Free Micro Tier
-+Cheerio
-+Request NPM Library
-+UnderscoreJS
-+Node FS
+*NodeJS
+*Redis with Kue as an external queue (https://github.com/LearnBoost/kue)
+*Running on AWS EC2 Free Micro Tier
+*Cheerio
+*Request NPM Library
+*UnderscoreJS
+*Node FS
 
 ##The Application
 
