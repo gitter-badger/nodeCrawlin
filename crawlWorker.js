@@ -14,6 +14,7 @@ var _ = require('underscore');
 var kue = require('kue'),
     jobs=kue.createQueue();
 var colors= require('colors') ;
+require('v8-profiler');
 
 
 // app.listen('8081')

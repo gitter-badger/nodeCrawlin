@@ -11,6 +11,7 @@ var _ = require('underscore');
 var colors=require('colors') ;
 var kue = require('kue'),
     jobs=kue.createQueue();
+require('v8-profiler');
 
 
 var  goodSeed=['http://www.alise.org/alise-membership---2014---institutional-members'];

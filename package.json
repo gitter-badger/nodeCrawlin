@@ -17,6 +17,7 @@
     "underscore":"*",
     "redis":"*",
     "kue" : "*",
-    "colors" : "*"
+    "colors" : "*",
+    "fs-extra":"*"
   }
 }
