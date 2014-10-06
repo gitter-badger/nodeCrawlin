@@ -2,19 +2,29 @@
  * Created by kingHenry on 10/4/14.
  */
 var express = require('express');
-var fs = require('fs');
+var fs = require('fs-extra');
 var request = require('request');
 var cheerio = require('cheerio');
 var app     = express();
 var async = require('async');
 var _ = require('underscore');
+var colors=require('colors') ;
 var kue = require('kue'),
     jobs=kue.createQueue();
 
 
-var seedUrl=['http://www.alise.org/alise-membership---2014---institutional-members'];
+var  goodSeed=['http://www.alise.org/alise-membership---2014---institutional-members'];
+var  badSeed1=['http://www.library.ualberta.ca/'] ;
+var  badSeed2=['http://www.sis.uottawa.ca/'] ;
+
+var  seedUrl=goodSeed
 
 //----------------------------------------------------------
+
+var dontCrawl= [
+".png", ".gif", ".css", ".js", ".bmp", ".tiff", ".mid", ".mp2", ".mp3", ".mp4", ".wav", ".avi", ".mov", ".mpeg",
+".ram", ".m4v", ".pdf", ".rm", ".smil", ".wmv", ".swf", ".wma", ".tgz", ".gz", ".rar", ".zip", ".jpeg", "rss2", ".xml"
+]
 
 var crawlUrls= function (level,urlsToCrawl,breadcrumb) {
     var myJobs = [];
@@ -25,12 +35,24 @@ var crawlUrls= function (level,urlsToCrawl,breadcrumb) {
             bCrumb=breadcrumb+'|'+oneUrl;
         }
 
-        var crawlJob = jobs.create('url', {
-            url: oneUrl
-           ,level:level+1
-           ,breadcrumb:bCrumb
-        }).save();
-        myJobs.push(crawlJob)
+        skipUrl=false
+        for (i=0; i<dontCrawl.length; i++ ) {
+           if ( oneUrl.indexOf( dontCrawl[i] ) != -1 ) {
+               skipUrl=true
+               break
+           }
+        }
+
+        if  ( ! skipUrl) {
+            var crawlJob = jobs.create('url', {
+                url: oneUrl
+               ,level:level+1
+               ,breadcrumb:bCrumb
+            }).save();
+            myJobs.push(crawlJob)
+        } else  {
+             console.log ("Skipping " + oneUrl)
+        }
     });
 
     console.log( "Firing " + myJobs.length + " jobs for" + bCrumb);
@@ -45,6 +67,8 @@ var crawlUrls= function (level,urlsToCrawl,breadcrumb) {
           if (result.level<3){
               console.log('cb initiating level: '+(result.level+1))
               crawlUrls(result.level,result.foundUrls,result.breadcrumb)
+          } else {
+              console.log ("LVL3 -->", result.foundUrls) 
           }
 
       })
