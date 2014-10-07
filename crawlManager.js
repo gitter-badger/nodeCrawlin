@@ -20,6 +20,7 @@ var  badSeed2=['http://www.sis.uottawa.ca/'] ;
 
 var  seedUrl=goodSeed
 
+var wStream=fs.createWriteStream('output.html');
 //----------------------------------------------------------
 
 var dontCrawl= [
@@ -58,6 +59,7 @@ var crawlUrls= function (level,urlsToCrawl,breadcrumb) {
 
     console.log( "Firing " + myJobs.length + " jobs for" + bCrumb);
     var jobCount=0;
+
     myJobs.forEach(function(job,index)
     {
 
@@ -72,14 +74,14 @@ var crawlUrls= function (level,urlsToCrawl,breadcrumb) {
               lvl3UrlArray=result.foundUrls;
               
               lvl3Breadcrumb='<b>'+result.breadcrumb+'</b></br>\n<ul>\n';
-              fs.appendFile('output.html',lvl3Breadcrumb,function(err){
+              wStream.write(lvl3Breadcrumb,function(err){
                if(err){
                  console.log(err);
                 }
               });
               for (i=0;i<lvl3UrlArray.length;i++){
                  var theUrl= "<li><a href="+lvl3UrlArray[i]+">"+lvl3UrlArray[i]+"</a></br>\n</li>\n"
-                  fs.appendFile('output.html',theUrl,function(err){
+                  wStream.write(theUrl,function(err){
                     if(err){
                      console.log(err);
                    }
@@ -87,7 +89,7 @@ var crawlUrls= function (level,urlsToCrawl,breadcrumb) {
                   });
               }
 
-                  fs.appendFile('output.html','</ul>',function(err){
+                  wStream.write('</ul>',function(err){
                     
                     if(err){
                      console.log(err);
