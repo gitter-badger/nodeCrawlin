@@ -73,7 +73,7 @@ jobs.process('url',function(job,done){
                 if (level==3) {
                     respCount=0 ;  goodUrlCount=0
 
-                    for(i=0;i<uniqueLinks.length;i++) {
+                    for(var i=0;i<uniqueLinks.length;i++) {
                         url=uniqueLinks[i]
                         request( {url: url, timeout: 7000, followAllRedirects:true }, function(error2, response2, html2){
                             respCount+=1
