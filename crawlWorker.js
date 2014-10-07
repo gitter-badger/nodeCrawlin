@@ -15,6 +15,7 @@ var kue = require('kue'),
     jobs=kue.createQueue();
 var colors= require('colors') ;
 require('v8-profiler');
+var memwatch = require('memwatch');
 
 
 // app.listen('8081')
@@ -42,7 +43,7 @@ jobs.process('url',function(job,done){
         done("blackListed")
     }
 
-    request( {url: url, timeout: 7000, followAllRedirects:true }, function(error, response, html){
+    request( {url: url, timeout: 7000 }, function(error, response, html){
         if (error) {
             console.log ("req ERR for " + error)
             done(error)
@@ -75,7 +76,7 @@ jobs.process('url',function(job,done){
 
                     for(var i=0;i<uniqueLinks.length;i++) {
                         url=uniqueLinks[i]
-                        request( {url: url, timeout: 7000, followAllRedirects:true }, function(error2, response2, html2){
+                        request( {url: url, timeout: 7000 }, function(error2, response2, html2){
                             respCount+=1
                             if (error2) {
                                 console.log ("Level3-ERR for " + response)
@@ -124,8 +125,3 @@ jobs.process('url',function(job,done){
     })   // request
 });   // jobs
 
-var isACollege = function(url){
-    // var retVal=false
-    //console.log( retVal, " isACollege ".cyan, retVal )
-    //return retVal
-}
