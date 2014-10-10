@@ -1,6 +1,8 @@
 nodeCrawlin
 ===========
 
+[![Build Status](https://drone.io/github.com/hariDasu/nodeCrawlin/status.png)](https://drone.io/github.com/hariDasu/nodeCrawlin/latest)
+
 ##Creating a web crawler with nodeJS
 
 ###View the output @ http://crawler.srihari.guru/output.html
