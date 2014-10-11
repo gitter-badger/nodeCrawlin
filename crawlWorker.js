@@ -14,11 +14,16 @@ var _ = require('underscore');
 var kue = require('kue'),
     jobs=kue.createQueue();
 var colors= require('colors') ;
-require('v8-profiler');
+//require('v8-profiler');
 var memwatch = require('memwatch');
+var agent = require('webkit-devtools-agent');
+agent.start({
+        port: 9998,
+        bind_to: 'localhost',
+        ipc_port: 3333,
+        verbose: true
+    });
 
-
-// app.listen('8081')
 
 console.log('Start Consumer')
 
@@ -111,7 +116,6 @@ jobs.process('url',function(job,done){
 
                     
                 } else {
-                    // console.log("KKKKKKKK")
                     var returnResults = {
                         foundUrls:uniqueLinks,
                         breadcrumb:breadcrumb,

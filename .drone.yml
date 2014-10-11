@@ -1,0 +1,11 @@
+image: dockerfile/nodejs
+env:
+  - node=/var/cache/drone
+script:
+  - node test
+services:
+  - redis
+notify:
+  email:
+    recipients:
+      - harirao3@gmail.com
