@@ -1,5 +1,6 @@
 nodeCrawlin
 ===========
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/hariDasu/nodeCrawlin?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 [![Build Status](https://drone.io/github.com/hariDasu/nodeCrawlin/status.png)](https://drone.io/github.com/hariDasu/nodeCrawlin/latest)
 
